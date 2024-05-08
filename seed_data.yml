@@ -1,0 +1,266 @@
+Locations:
+  -
+    name: Dark Forest
+    id: 1
+    category: Region
+    description: The dark and mysterious forest.
+    notes: The entrance to a dark, misty forest full of winding paths. There is rumored to be a hidden treasure somewhere in the forest.
+    fast_travel: true
+  -
+    name: Blacksail Castle
+    id: 2
+    category: Region
+    description: The cliffside castle overlooking the sea. 
+    fast_travel: true
+  -
+    name: Humbleton Village
+    id: 3
+    category: Region
+    description: A small village on the outskirts of the dark forest.
+  -
+    name: Dank Cave
+    id: 4
+    category: Region
+    description: A dank and musty cave.
+    notes: Contains a goblin hideout.
+  -
+    name: Dark Forest 1A
+    id: 5
+    category: Location
+    description: A clearing in the dark forest.
+  -
+    name: Dark Forest 1B
+    id: 6
+    category: Location
+    description: A small pond in the dark forest.
+  -
+    name: Dark Forest 1C
+    id: 7
+    category: Location
+    description: A giant tree in the dark forest.
+  -
+    name: Dark Forest Dank Cave Entrance
+    id: 8
+    category: Location
+    description: A rocky hillside in the forest.
+    notes: Has a hidden entrance to the dank cave.
+    starting_location: true
+  -
+    name: Dank Cave Entrance Chamber
+    id: 9
+    category: Location
+    description: A large chamber inside the dank cave.
+    starting_location: true
+  -
+    name: Dank Cave 1A
+    id: 10
+    category: Location
+    description: A small chamber inside the dank cave.
+  -
+    name: Dank Cave 1B
+    id: 11
+    category: Location
+    description: A small chamber inside the dank cave.
+  -
+    name: Dank Cave 1C
+    id: 12
+    category: Location
+    description: A small chamber inside the dank cave.
+    notes: Goblin jail
+  -
+    name: Dank Cave 2A
+    id: 13
+    category: Location
+    description: A large chamber inside the dank cave with a bonfire.
+  -
+    name: Dank Cave 2B
+    id: 14
+    category: Location
+    description: A small chamber inside the dank cave.
+    notes: Goblin storage room
+  -
+    name: Dank Cave 2C
+    id: 15
+    category: Location
+    description: A small chamber inside the dank cave.
+    notes: Goblin sleeping quarters
+  -
+    name: Dank Cave 3A
+    id: 16
+    category: Location
+    notes: Goblin throne room
+  -
+    name: Yvette's Cottage
+    id: 17
+    category: Location
+  -
+    name: Tavern
+    id: 18
+    category: Building
+    description: A cozy tavern in Humbleton Village.
+  -
+    name: Woodsman's Cabin
+    id: 19
+    category: Building
+    description: A small cabin on the edge of the dark forest.
+  -
+    name: Blacksmith's Shop
+    id: 20
+    category: Building
+    description: A blacksmith's shop in Humbleton Village.
+  -
+    name: General Store
+    id: 21
+    category: Building
+    description: A general store in Humbleton Village.
+  -
+    name: Shepherd's House
+    id: 22
+    category: Building
+    description: A shepherd's house in Humbleton Village.
+  -
+    name: Humbleton Village Square
+    id: 23
+    category: Location
+    description: The central square of Humbleton Village.
+    starting_location: true
+Connections:
+  -
+    id: 1
+    name: Forest Path
+    start_location_id: 4
+    end_location_id: 1
+    description: A rough path from Humbleton Village to the entrance of the dark forest.
+    category: Path
+    is_fast_travel_path: true
+  -
+    id: 2
+    name: Castle Road
+    start_location_id: 4
+    end_location_id: 2
+    description: The road from Humbleton Village to Blacksail Castle.
+    category: Road
+    is_fast_travel_path: true
+  -
+    id: 3
+    name: Dark Forest Entrance to 1A
+    start_location_id: 1
+    end_location_id: 5
+    description: A rough trail through the forest.
+    category: Trail
+  -
+    id: 4
+    name: Dark Forest Entrance to 1B
+    start_location_id: 1
+    end_location_id: 6
+    description: A rough trail through the forest.
+    category: Trail
+  -
+    id: 5
+    name: Dark Forest 1A to 1C
+    start_location_id: 5
+    end_location_id: 7
+    description: A winding path through the forest.
+    category: Trail
+  -
+    id: 6
+    name: Dark Forest 1C to Dank Cave Entrance
+    start_location_id: 7
+    end_location_id: 8
+    description: A hidden path through the forest.
+    category: Trail
+  -
+    id: 7
+    name: Dank Cave Entrance to Dank Cave Entrance Chamber
+    start_location_id: 8
+    end_location_id: 9
+    description: A hidden mossy entrance into the cave.
+    is_hidden: true
+    category: Cave Opening
+  -
+    id: 8
+    name: Dank Cave Entrance Chamber to Dank Cave 1A
+    start_location_id: 9
+    end_location_id: 10
+    description: A narrow tunnel leading deeper into the cave.
+    category: Tunnel
+  -
+    id: 9
+    name: Dank Cave Entrance Chamber to Dank Cave 1B
+    start_location_id: 9
+    end_location_id: 11
+    category: Tunnel
+  -
+    id: 10
+    name: Dank Cave 1B to Dank Cave 1C
+    start_location_id: 11
+    end_location_id: 12
+    category: Tunnel
+  -
+    id: 11
+    name: Dank Cave 1C to Dank Cave 2A
+    start_location_id: 12
+    end_location_id: 13
+    category: Tunnel
+    description: A slippery tunnel leading upward.
+  -
+    id: 12
+    name: Dank Cave 2A to Dank Cave 2B
+    start_location_id: 13
+    end_location_id: 14
+    category: Door
+  -
+    id: 13
+    name: Dank Cave 2B to Dank Cave 2C
+    start_location_id: 14
+    end_location_id: 15
+    category: Door
+  -
+    id: 14
+    name: Dank Cave 2C to Dank Cave 3A
+    start_location_id: 15
+    end_location_id: 16
+    category: Staircase
+  -
+    id: 15
+    name: Village Square to Tavern
+    start_location_id: 23
+    end_location_id: 18
+    category: Path
+  -
+    id: 16
+    name: Village Square to Blacksmith's Shop
+    start_location_id: 23
+    end_location_id: 20
+    category: Path
+  -
+    id: 17
+    name: Village Square to General Store
+    start_location_id: 23
+    end_location_id: 21
+    category: Path
+  -
+    id: 18
+    name: Village Square to Shepherd's House
+    start_location_id: 23
+    end_location_id: 22
+    category: Path
+  -
+    id: 19
+    name: Village Square to Woodsman's Cabin
+    start_location_id: 23
+    end_location_id: 19
+    category: Path
+  -
+    id: 20
+    name: Woodsman's Cabin to Dark Forest Entrance
+    start_location_id: 19
+    end_location_id: 1
+    category: Path
+  -
+    id: 21
+    name: Village Square to Yvette's Cottage
+    start_location_id: 23
+    end_location_id: 17
+    category: Path
+
