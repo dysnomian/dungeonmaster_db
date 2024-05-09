@@ -66,7 +66,8 @@ def create_tables() -> None:
                 parent_id INTEGER REFERENCES Locations(id) ON DELETE CASCADE,
                 name VARCHAR(255) NOT NULL UNIQUE,
                 category VARCHAR(100),
-                description TEXT,
+                interior_description TEXT,
+                exterior_description TEXT,
                 notes TEXT
             )
         """)
@@ -85,7 +86,8 @@ def create_tables() -> None:
                 category VARCHAR(100),
                 is_one_way BOOLEAN DEFAULT FALSE,
                 is_hidden BOOLEAN DEFAULT FALSE,
-                is_fast_travel_path BOOLEAN DEFAULT FALSE
+                is_fast_travel_path BOOLEAN DEFAULT FALSE,
+                describe_end_location_exterior BOOLEAN DEFAULT FALSE
             )
         """)
         print("Table Connections created.")
@@ -139,14 +141,15 @@ def seed_tables(table_names: List[str] = ['Locations', 'Connections']) -> None:
             try:
                 cursor = conn.cursor()
                 cursor.execute("""
-                    INSERT INTO Locations (id, name, category, description, notes)
+                    INSERT INTO Locations (id, name, category, interior_description, exterior_description, notes)
                     VALUES
-                    (%(id)s, %(name)s, %(category)s, %(description)s, %(notes)s)
+                    (%(id)s, %(name)s, %(category)s, %(interior_description)s, %(exterior_description)s, %(notes)s)
                 """, {
                     'id': location.get('id', None),
                     'name': location['name'],
                     'category': location.get('category', None),
-                    'description': location.get('description', None),
+                    'interior_description': location.get('interior_description', None),
+                    'exterior_description': location.get('exterior_description', None),
                     'notes': location.get('notes', None)
                 })
                 print(f"Location {location['id']} \"{location['name']}\" seeded.")
@@ -162,9 +165,9 @@ def seed_tables(table_names: List[str] = ['Locations', 'Connections']) -> None:
             try:
                 cursor = conn.cursor()
                 cursor.execute("""
-                    INSERT INTO Connections (id, start_location_id, end_location_id, name, description, category, is_one_way, is_hidden, is_fast_travel_path)
+                    INSERT INTO Connections (id, start_location_id, end_location_id, name, description, category, is_one_way, is_hidden, is_fast_travel_path, describe_end_location_exterior)
                     VALUES
-                    (%(id)s, %(start_location_id)s, %(end_location_id)s, %(name)s, %(description)s, %(category)s, %(is_one_way)s, %(is_hidden)s, %(is_fast_travel_path)s)
+                    (%(id)s, %(start_location_id)s, %(end_location_id)s, %(name)s, %(description)s, %(category)s, %(is_one_way)s, %(is_hidden)s, %(is_fast_travel_path)s, %(describe_end_location_exterior)s)
                 """, {
                     'id': connection.get('id', None),
                     'start_location_id': connection['start_location_id'],
@@ -174,7 +177,8 @@ def seed_tables(table_names: List[str] = ['Locations', 'Connections']) -> None:
                     'category': connection.get('category', None),
                     'is_one_way': connection.get('is_one_way', False),
                     'is_hidden': connection.get('is_hidden', False),
-                    'is_fast_travel_path': connection.get('is_fast_travel_path', False)
+                    'is_fast_travel_path': connection.get('is_fast_travel_path', False),
+                    'describe_end_location_exterior': connection.get('describe_end_location_exterior', False),
                 })
                 print(f"Connection {connection['id']} \"{connection['name']}\" seeded.")
             except psycopg2.errors.UniqueViolation:

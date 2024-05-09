@@ -3,86 +3,90 @@ Locations:
     name: Dark Forest
     id: 1
     category: Region
-    description: The dark and mysterious forest.
+    interior_description: The dark and mysterious forest.
+    exterior_description: A dark and misty forest in the hills outside of Humbleton Village.
     notes: The entrance to a dark, misty forest full of winding paths. There is rumored to be a hidden treasure somewhere in the forest.
     fast_travel: true
   -
     name: Blacksail Castle
     id: 2
     category: Region
-    description: The cliffside castle overlooking the sea. 
+    interior_description: The cliffside castle overlooking the sea. 
     fast_travel: true
   -
     name: Humbleton Village
     id: 3
     category: Region
-    description: A small village on the outskirts of the dark forest.
+    interior_description: A small but lively village on the outskirts of the dark forest.
+    exterior_description: A small village in the hills.
   -
     name: Dank Cave
     id: 4
     category: Region
-    description: A dank and musty cave.
+    interior_description: A dank and musty cave.
     notes: Contains a goblin hideout.
   -
     name: Dark Forest 1A
     id: 5
     category: Location
-    description: A clearing in the dark forest.
+    interior_description: A clearing in the dark forest.
+    exterior_description: A little light breaking through the trees.
   -
     name: Dark Forest 1B
     id: 6
     category: Location
-    description: A small pond in the dark forest.
+    interior_description: A small pond in the dark forest.
+    exterior_description: A clearing with the smell of water.
   -
     name: Dark Forest 1C
     id: 7
     category: Location
-    description: A giant tree in the dark forest.
+    interior_description: A giant tree in the dark forest.
   -
     name: Dark Forest Dank Cave Entrance
     id: 8
     category: Location
-    description: A rocky hillside in the forest.
+    interior_description: A rocky hillside in the forest.
     notes: Has a hidden entrance to the dank cave.
     starting_location: true
   -
     name: Dank Cave Entrance Chamber
     id: 9
     category: Location
-    description: A large chamber inside the dank cave.
+    interior_description: A large chamber inside the dank cave.
     starting_location: true
   -
     name: Dank Cave 1A
     id: 10
     category: Location
-    description: A small chamber inside the dank cave.
+    interior_description: A small chamber inside the dank cave.
   -
     name: Dank Cave 1B
     id: 11
     category: Location
-    description: A small chamber inside the dank cave.
+    interior_description: A small chamber inside the dank cave.
   -
     name: Dank Cave 1C
     id: 12
     category: Location
-    description: A small chamber inside the dank cave.
+    interior_description: A small chamber inside the dank cave.
     notes: Goblin jail
   -
     name: Dank Cave 2A
     id: 13
     category: Location
-    description: A large chamber inside the dank cave with a bonfire.
+    interior_description: A large chamber inside the dank cave with a bonfire.
   -
     name: Dank Cave 2B
     id: 14
     category: Location
-    description: A small chamber inside the dank cave.
+    interior_description: A small chamber inside the dank cave.
     notes: Goblin storage room
   -
     name: Dank Cave 2C
     id: 15
     category: Location
-    description: A small chamber inside the dank cave.
+    interior_description: A small chamber inside the dank cave.
     notes: Goblin sleeping quarters
   -
     name: Dank Cave 3A
@@ -93,36 +97,51 @@ Locations:
     name: Yvette's Cottage
     id: 17
     category: Location
+    interior_description: A warm and cozy cottage with a cauldron and racks of bottles.
+    exterior_description: A small cottage with a garden.
+    notes: Home to a kind young witch named Yvette who is an herbalist. She aids the villagers and the player with potions, spells, and advice.
+    inhabitants:
+      - Yvette
+      - Yvette's tressym familiar, Mugwort
   -
-    name: Tavern
+    name: Saucy Unicorn Tavern
     id: 18
     category: Building
-    description: A cozy tavern in Humbleton Village.
+    interior_description: A cozy tavern in Humbleton Village. A warm hearth. Tables and chairs. A bar.
+    exterior_description: A two-story house with a sign with a unicorn on it.
+    inhabitants:
+      - Marigold
+      - Iragath
   -
     name: Woodsman's Cabin
     id: 19
     category: Building
-    description: A small cabin on the edge of the dark forest.
+    interior_description: A small cabin on the edge of the dark forest.
+    exterior_description: A small cabin with a woodpile and an axe.
   -
     name: Blacksmith's Shop
     id: 20
     category: Building
-    description: A blacksmith's shop in Humbleton Village.
+    interior_description: A blacksmith's shop in Humbleton Village.
+    exterior_description: A shop with a sign with an anvil and hammer on it.
   -
     name: General Store
     id: 21
     category: Building
-    description: A general store in Humbleton Village.
+    interior_description: A general store in Humbleton Village.
+    exterior_description: A shop with a sign with a bag of coins on it.
   -
     name: Shepherd's House
     id: 22
     category: Building
-    description: A shepherd's house in Humbleton Village.
+    interior_description: A shepherd's house in Humbleton Village.
+    exterior_description: A small house with a pen for sheep.
   -
     name: Humbleton Village Square
     id: 23
     category: Location
-    description: The central square of Humbleton Village.
+    interior_description: The central square of Humbleton Village.
+    exterior_description: A small square with a well in the center.
     starting_location: true
 Connections:
   -
