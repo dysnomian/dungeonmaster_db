@@ -1,2 +1,5 @@
 .envrc
 __pycache__/
+dungeonmaster_db.egg-info/
+build/
+dist/
